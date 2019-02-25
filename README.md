@@ -5,6 +5,6 @@ The below is copied...
 
 ## How to use ##
 
-'''shell
+```shell
 ruby directory.rb
-''' 
+``` 
