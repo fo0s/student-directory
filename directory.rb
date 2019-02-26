@@ -37,9 +37,22 @@ def input_students
   name = gets.chomp
 
   while !name.empty? do
-    students << {name: name, cohort: :november}
+    # Info collecting
+
+    puts "Any hobbies?"
+    hobbie = gets.chomp
+
+    puts "Country of birth?"
+    cob = gets.chomp
+
+    puts "Height?"
+    height = gets.chomp
+
+    students << {name: name, cohort: :november, hobbie: hobbie, birth_country: cob, height: height}
+
     puts "Now we have #{students.count} students"
     name = gets.chomp
+
   end
   students
 end
@@ -48,10 +61,29 @@ def print_header
   puts "-------------"
 end
 def print(students)
+  # Step 8, Question 1: students.each_with_index do |student, index|
   students.each do |student|
+    # Step 8, question 1: puts "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
+    # Step 8, Question 2: puts "#{student[:name]} (#{student[:cohort]} cohort)" if student[:name].start_with?("B")
+    # Step 8, Question 3: puts "#{student[:name]} (#{student[:cohort]} cohort)" if student[:name].size < 12
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
+
+# Step 8, Question 4:
+# def print(students)
+#   count = 0
+#   while count < students.size
+#     puts "#{students[count][:name]} (#{students[count][:cohort]} cohort)"
+#     count += 1
+#   end
+# end
+
+def extra_info
+  puts "Any hobbies?"
+
+end
+
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
 end
