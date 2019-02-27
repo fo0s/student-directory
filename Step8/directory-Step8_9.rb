@@ -1,12 +1,15 @@
 def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
+
   students = []
   name = gets.chomp
-
   while !name.empty? do
     students << {name: name, cohort: :november}
-    puts "Now we have #{students.count} students"
+    output = "Now we have #{students.count} student"
+    # Check for more than one student. If so, add a s
+    output += "s" if students.count > 1
+    puts output
     name = gets.chomp
   end
   students
@@ -19,13 +22,16 @@ end
 
 def print(students)
   students.each do |student|
-    # Added spacing
-    puts "#{student[:name].ljust(30)} (#{student[:cohort]} cohort)"
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
 def print_footer(students)
-  puts "Overall, we have #{students.count} great students"
+  # Check if more than one student
+  output = "Overall, we have #{students.count} great student"
+  # If so, add a s to the end
+  output += "s" if students.count > 1
+  puts output
 end
 
 students = input_students

@@ -11,16 +11,8 @@ def input_students
     cohort = "None" if cohort.empty?
     # Check for typos
     puts "#{name} (#{cohort} cohort), is this correct? y for yes, n for no."
-    # Check for inconsistent confirmation
-    confirmation = gets.downcase.chomp
-    while confirmation != "y" && confirmation != "n"
-      puts "I don't recognise that."
-      puts "If the above info is correct, press y. Otherwise press n to change"
-      confirmation = gets.downcase.chomp
-    end
-    # Save info if true
-    if confirmation == "y"
-      students << {name: name, cohort: cohort.to_sym}
+    if gets.chomp == "y"
+      students << {name: name, cohort: cohort}
       puts "Now we have #{students.count} students"
     end
     puts "Please enter a name or press return to exit."
@@ -35,8 +27,16 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  # Add month array to cross reference
+  month_array = [ "January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November",
+                  "December", "None"  ]
+  #Add new each method
+  month_array.each do |month|
+    students.each do |student|
+      # Cross reference the month
+      puts "#{student[:name]} (#{student[:cohort]} cohort)" if student[:cohort] == month
+    end
   end
 end
 

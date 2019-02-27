@@ -2,12 +2,13 @@ def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
   students = []
-  name = gets.chomp
-
+  # Replace chomp with strip
+  name = gets.strip
   while !name.empty? do
     students << {name: name, cohort: :november}
     puts "Now we have #{students.count} students"
-    name = gets.chomp
+    # replace chomp with strip
+    name = gets.strip
   end
   students
 end
@@ -19,8 +20,7 @@ end
 
 def print(students)
   students.each do |student|
-    # Added spacing
-    puts "#{student[:name].ljust(30)} (#{student[:cohort]} cohort)"
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
