@@ -1,4 +1,4 @@
-@students = [] # Changed to instance variable carrying an array
+@students = []
 
 def input_students
   puts "Please enter the names of the students"
@@ -11,7 +11,6 @@ def input_students
   end
 end
 
-# Compress the menu
 def interactive_menu
   loop do
     print_menu
@@ -19,14 +18,14 @@ def interactive_menu
   end
 end
 
-# Turn the menu into a method so we can add or delete as we like
 def print_menu
   puts "1. Add new students"
   puts "2. Show the students"
+  # Add new menu input to reflect changes
+  puts "3. Save the list to a file"
   puts "9. Exit"
 end
 
-# Add an output method
 def show_students
   print_header
   print_student_list
@@ -39,13 +38,31 @@ def process(selection)
     input_students
   when "2"
     show_students
+  # Add make file option
+  when "3"
+    save_students
   when "9"
     puts "Thank you kindly... please come again. Bye!"
-    exit # Stop everything and exit out of the program
+    exit
   else
-    # Error checking
-    puts "I don't know what you meant, try again"
+    puts "Not recognised, please try again"
   end
+end
+# Ability to save everything to a file for future use
+def save_students
+  # Create the file or open if it exists
+  file = File.open("students.csv", "w")
+  # Add new lines to the file
+  @students.each do |student|
+    # Change from hash to array as csv doesn't play well with hash
+    student_data = [student[:name], student[:cohort]]
+    # Join toget the line
+    csv_line = student_data.join(",")
+    # Write to the file
+    file.puts csv_line
+  end
+  # Save and close the file
+  file.close
 end
 
 def print_header

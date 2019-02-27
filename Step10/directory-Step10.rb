@@ -44,7 +44,7 @@ def process(selection)
     exit # Stop everything and exit out of the program
   else
     # Error checking
-    puts "I don't know what you meant, try again"
+    puts "Not recognised, please try again"
   end
 end
 
