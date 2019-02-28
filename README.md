@@ -36,11 +36,14 @@ depending on which perspective you take.
 ### Step 3: Refactoring
 
 The beginning of making things more stream-lined and `style guide` friendly.
+
 **Added** First implementation of a variable
 
 ### Step 4: Arrays
 
 The implementation of using arrays to store the names. The introduction of the first method to be used; `.each` scrolls through the array and prints out each name on a
 separate line.
+
 **Added** Dropped the names into an array
+
 **Added** .each to cycle through the names
