@@ -31,19 +31,22 @@ step and has been updated since.
 
 Starts off with simple puts commands of a bunch of evil villains... or heroes
 depending on which perspective you take.
-**Added:** A total count of lines in the list
+
+> **Added:** A total count of lines in the list
 
 ### Step 3: Refactoring
 
 The beginning of making things more stream-lined and `style guide` friendly.
 
-**Added** First implementation of a variable
+> **Added:** First implementation of a variable
 
 ### Step 4: Arrays
 
 The implementation of using arrays to store the names. The introduction of the first method to be used; `.each` scrolls through the array and prints out each name on a
 separate line.
 
-**Added** Dropped the names into an array
+> **Added:** Dropped the names into an array
 
-**Added** .each to cycle through the names
+> **Added:** .each to cycle through the names
+
+> **Removed** Hard coded puts of names
