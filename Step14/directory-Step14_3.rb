@@ -11,7 +11,7 @@
   :exit => "Thank you kindly... please come again. Bye!",
   :try_again => "Not recognised, please try again"
 }
-# New menu array
+# New menu items
 @print_menu = [ "1. Add new students",
                 "2. Show the students",
                 "3. Save the list to a file",
