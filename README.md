@@ -21,10 +21,10 @@ ruby directory.rb
 
 ## Overview of steps in week 4
 
-###Step 1: Setting up the environment
+### Step 1: Setting up the environment
 
 The basics of creating a new file, creating a new repo on Github
 and tying them together. This readme file was created in that first
 step and has been updated since.
 
-###Step 2: Printing the list of students
+### Step 2: Printing the list of students
