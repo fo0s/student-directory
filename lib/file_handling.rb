@@ -10,13 +10,13 @@ def load_students(filename = "students.csv")
 end
 
 def try_load_students
-  filename = ARGV.first
-  filename = "students.csv" if filename.nil?
-  if File.exists?(filename)
-    load_students(filename)
-    puts "Loaded #{@students.count} from #{filename}"
+  @filename = ARGV.first
+  @filename = "students.csv" if @filename.nil?
+  if File.exists?(@filename)
+    load_students(@filename)
+    puts "Loaded #{@students.count} from #{@filename}"
   else
-    puts "Sorry, #{filename} doesn't exist."
+    puts "Sorry, #{@filename} doesn't exist."
     exit
   end
 end
@@ -45,4 +45,8 @@ def input_students
 end
 def handle_input(name, cohort)
  @students << {name: name, cohort: cohort}
+end
+
+def change_file_name
+
 end
