@@ -1,7 +1,7 @@
 # instance variable
 @students = []
 
-# Add output items
+# Added output items
 @output_text = {
   :loading => "Loading file.",
   :saved => "File has been saved",
@@ -11,7 +11,7 @@
   :exit => "Thank you kindly... please come again. Bye!",
   :try_again => "Not recognised, please try again"
 }
-
+# New menu array
 @print_menu = [ "1. Add new students",
                 "2. Show the students",
                 "3. Save the list to a file",
@@ -25,7 +25,6 @@ def load_students(filename = "students.csv")
   file = File.open("students.csv", "r")
   file.readlines.each do |line|
     name, cohort = line.chomp.split(',')
-    # Updated to handle new method
     handle_input(name, cohort.to_sym)
   end
   file.close
@@ -33,7 +32,6 @@ end
 
 def try_load_students
   filename = ARGV.first
-  # Added error check for file not existing
   filename = "students.csv" if filename.nil?
   if File.exists?(filename)
     load_students(filename)
@@ -74,6 +72,7 @@ def interactive_menu
   try_load_students
   loop do
     puts @output_text[:line]
+    # Removed menu method and instead went for array .each combo
     @print_menu.each { |menu_item| puts menu_item }
     puts @output_text[:line]
     process(STDIN.gets.chomp)
@@ -81,6 +80,7 @@ def interactive_menu
 end
 
 def show_students
+  # Removed header method and moved to here instead
   puts @output_text[:header]
   puts @output_text[:line]
   print_student_list

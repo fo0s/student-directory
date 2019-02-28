@@ -49,4 +49,4 @@ separate line.
 
 > **Added:** .each to cycle through the names
 
-> **Removed** Hard coded puts of names
+> **Removed:** Hard coded puts of names
