@@ -57,6 +57,7 @@ def save_students
 end
 
 def input_students
+  # Implimented clear screen to see list more clearly
   system "clear"
   puts @output_text[:enter_names]
   name = STDIN.gets.chomp
@@ -82,6 +83,7 @@ def interactive_menu
 end
 
 def show_students
+  # Clear screen to see the list more clearly
   system "clear"
   puts @output_text[:header]
   puts @output_text[:line]
@@ -89,6 +91,7 @@ def show_students
   print_footer
   puts @output_text[:line]
   puts @output_text[:continue]
+  # Added pause
   gets
   system "clear"
 end
