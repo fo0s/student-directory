@@ -15,7 +15,8 @@ end
 
 def try_load_students
   filename = ARGV.first
-  return if filename.nil?
+  # Added error check for file not existing
+  filename = "students.csv" if filename.nil?
   if File.exists?(filename)
     load_students(filename)
     puts "Loaded #{@students.count} from #{filename}"
@@ -42,19 +43,19 @@ def input_students
   puts "To finish, just hit return twice"
   name = STDIN.gets.chomp
   while !name.empty? do
-    # Updated to handle new method
     handle_input(name, :November)
     puts "Now we have #{@students.count} students"
     name = STDIN.gets.chomp
   end
 end
-# Added new method because of DRY violation
 def handle_input(name, cohort)
  @students << {name: name, cohort: cohort}
 end
 
 # menu section
 def interactive_menu
+  # Added autoload of file on startup
+  try_load_students
   loop do
     print_menu
     process(STDIN.gets.chomp)
