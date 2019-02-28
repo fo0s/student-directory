@@ -22,7 +22,7 @@
               ]
 
 # file handling
-def load_students(filename = "students.csv")
+def load_students(@filename = "students.csv")
   puts @output_text[:loading]
   file = File.open("students.csv", "r")
   file.readlines.each do |line|
@@ -33,15 +33,19 @@ def load_students(filename = "students.csv")
 end
 
 def try_load_students
-  filename = ARGV.first
-  filename = "students.csv" if filename.nil?
-  if File.exists?(filename)
-    load_students(filename)
-    puts "Loaded #{@students.count} from #{filename}"
+  @filename = ARGV.first
+  @filename = "students.csv" if @filename.nil?
+  if File.exists?(@filename)
+    load_students(@filename)
+    puts "Loaded #{@students.count} from #{@filename}"
   else
-    puts "Sorry, #{filename} doesn't exist."
+    puts "Sorry, #{@filename} doesn't exist."
     exit
   end
+end
+
+def rename_file
+
 end
 
 # input of values
@@ -106,6 +110,8 @@ def process(selection)
     save_students
   when "4"
     load_students
+  when "5"
+    rename_file
   when "9"
     puts @output_text[:exit]
     exit
