@@ -63,9 +63,8 @@ end
 
 def print_menu(section)
   case section
-  when "main"
+  when :main
     @main_menu.each { |menu_item| puts menu_item }
-  else
   end
 end
 
