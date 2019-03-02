@@ -36,7 +36,7 @@ depending on which perspective you take.
 
 ### Step 3: Refactoring
 
-The beginning of making things more stream-lined and `style guide` friendly.
+The beginning of making things more stream-lined and [style guide](https://github.com/rubocop-hq/ruby-style-guide) friendly.
 
 > **Added:** First implementation of a variable
 
@@ -49,4 +49,17 @@ separate line.
 
 > **Added:** .each to cycle through the names
 
-> **Removed:** Hard coded puts of names
+> **Removed:** Hard coded 'puts' of names
+
+### Step 5: Methods
+
+The start of encapsulation... breaking down the code into smaller Methods to make the code easier to follow and read. A direct quote from the step:
+> Now that we have extracted the code into the methods, the body of our program reads
+> almost like English. - Makers week 4 pre-course
+
+Well said.
+
+> **Added** Broke up the code into smaller methods
+> **Added** Called the methods to the end in the order we need them
+
+### Step 6: Adding more information
