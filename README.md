@@ -53,15 +53,16 @@ separate line.
 
 ### Step 5: Methods
 
-The start of encapsulation... breaking down the code into smaller Methods to make the code easier to follow and read. A direct quote from the step:
+The start of encapsulation... breaking down the code into smaller methods to make the code easier to follow and read. A direct quote from the step:
 > "Now that we have extracted the code into the methods, the body of our program reads
 > almost like English."
 >
-> - Makers week 4 pre-course
+> Makers week 4 pre-course
 
 Well said.
 
 > **Added** Broke up the code into smaller methods
+
 > **Added** Called the methods to the end in the order we need them
 
 ### Step 6: Adding more information
@@ -72,6 +73,25 @@ we only store the name and cohort... but the internet loves info and info
 we shall give it.
 
 > **Added** Changed students array to hold hash values
+
 > **Added** Adapted print method to deal with the hash values
 
 ### Step 7. Asking for user input
+
+The first steps to properly interacting with the program... user input. Also our
+first taste of a loop. Gone are the days of having hard coded lists of villains.
+Now we can (temporarily) add as many as we want!
+
+**Added** input_students method to add names to an array.
+
+### Step 8. Exercises
+
+The first part of 2 sections challenging us to add or change sections of the code.
+
+- 1. Add a print_with_index method to print student names with a indexable reference
+
+- 2. Add Method to print off students who's name begins with a specific letter
+
+- 3. Add method to print off students who's name is less than a specified length. Default is 12.
+
+- 4. 
