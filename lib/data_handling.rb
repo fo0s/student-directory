@@ -2,6 +2,7 @@
 # require_relative 'vars.rb'
 
 def print_header
+  system 'clear'
   puts "The students of Villains Academy".center(85)
   puts "-" * 85
   puts "|" + "Name".center(20) + "|" + "Cohort".center(20) + "|" + "Hobbie".center(20) + "|" + "Country of birth".center(20) + "|"
@@ -26,17 +27,16 @@ def print(students)
 end
 
 def input_students
+  system 'clear'
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
-  students = []
   name = gets.strip
   while !name.empty? do
     # add the student hash to the array
-    students << student_additional_info(name)
-    puts "Now we have #{students.count} students"
+    @students << student_additional_info(name)
+    puts "Now we have #{@students.count} students"
     name = gets.strip
   end
-  students
 end
 
 # step 8 additions

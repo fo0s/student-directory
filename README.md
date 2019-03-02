@@ -94,7 +94,7 @@ The first part of 2 sections challenging us to add or change sections of the cod
 
 - 3. Add method to print off students who's name is less than a specified length. Default is 12.
 
-- 4. Replace .each in print method using while or until loops. I chose until.
+- 4. Replace `.each` in print method using while or until loops. I chose until.
 
 - 5. Make internet happy and add more sections for additional info
 
@@ -112,11 +112,11 @@ The first part of 2 sections challenging us to add or change sections of the cod
 
 - 9. Change footer message to accommodate 1 or more students
 
-- 10. Change all '.chomp' to '.strip'
+- 10. Change all `.chomp` to `.strip`
 
 - 11. A typo challenge. Was given a file with multiple typos and we had to fix it with syntax disabled.
 
-- 12. Added an exit command if no students are listed
+- 12. Added an `exit` command if no students are listed
 
 ### Step 9. Adding an interactive menu
 
@@ -124,6 +124,24 @@ Adding a bit of bling to a project is never bad thing.
 In this section we are adding a menu to push different actions to the project
 as we see fit.
 
-> **Added** interactive_menu with 3 simple options
+> **Added** interactive_menu method with 3 simple options
 
 ### Step 10. More refactoring
+
+Refactoring is the process making the code cleaner and more stream-lined.
+In this step we look to doing this to the menu. This sets some new problems,
+namely having the student variable needed in too many places at once.
+Solution? Change it to a instance variable so that everyone can share it. Happy days.
+
+### Step 11. Saving the data to a file
+
+Until this point we lose all the data that gets added every time we exit the program.
+No more! Adding the ability to save all that inputted data to a file that we can
+load when the program starts is a life saver. Obviously we don't want to advertise
+all our villain's names to all of github. Introducing a brief intro to `.gitignore`.
+
+> **Added** New option to the interactive_menu
+
+> **Added** New save_students method to write to file
+
+### Step 12. Loading the data from the file
