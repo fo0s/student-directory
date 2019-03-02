@@ -140,8 +140,15 @@ No more! Adding the ability to save all that inputted data to a file that we can
 load when the program starts is a life saver. Obviously we don't want to advertise
 all our villain's names to all of github. Introducing a brief intro to `.gitignore`.
 
-> **Added** New option to the interactive_menu
+> **Added** New option to the interactive_menu method
 
 > **Added** New save_students method to write to file
 
 ### Step 12. Loading the data from the file
+
+Added the ability to load a file with another option on our menu. It's coming
+along nicely now.
+
+> **Added** New option to the interactive_menu method
+
+> **Added** New load_students method to open and load the values

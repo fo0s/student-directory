@@ -1,6 +1,6 @@
-require './lib/vars.rb'
 require './lib/data_handling.rb'
 require './lib/menus.rb'
+require './lib/file_handling'
 
 # def print_all
 #   print_header
