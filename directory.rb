@@ -1,7 +1,13 @@
 require './lib/vars.rb'
 require './lib/data_handling.rb'
 
-students = input_students
-print_header
-print(students)
-print_footer(students)
+def print_all
+  print_header
+  print(@students)
+  puts "-" * 85
+  print_footer(@students)
+  typo_check
+end
+
+@students = input_students
+print_all

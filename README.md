@@ -57,7 +57,7 @@ The start of encapsulation... breaking down the code into smaller methods to mak
 > "Now that we have extracted the code into the methods, the body of our program reads
 > almost like English."
 >
-> Makers week 4 pre-course
+> ----Makers week 4 pre-course
 
 Well said.
 
@@ -82,7 +82,7 @@ The first steps to properly interacting with the program... user input. Also our
 first taste of a loop. Gone are the days of having hard coded lists of villains.
 Now we can (temporarily) add as many as we want!
 
-**Added** input_students method to add names to an array.
+> **Added** input_students method to add names to an array.
 
 ### Step 8. Exercises
 
@@ -94,4 +94,26 @@ The first part of 2 sections challenging us to add or change sections of the cod
 
 - 3. Add method to print off students who's name is less than a specified length. Default is 12.
 
-- 4. 
+- 4. Replace .each in print method using while or until loops. I chose until.
+
+- 5. Make internet happy and add more sections for additional info
+
+- 6. Beautifying output
+
+- 7. So many questions. Added methods to:
+
+-- Check for empty values
+
+-- Apply default values
+
+-- Typo request
+
+- 8. List students by cohort
+
+- 9. Change footer message to accommodate 1 or more students
+
+- 10. Change all '.chomp' to '.strip'
+
+- 11. A typo challenge. Was given a file with multiple typos and we had to fix it with syntax disabled.
+
+- 12. Added an exit command if no students are listed
