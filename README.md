@@ -54,8 +54,10 @@ separate line.
 ### Step 5: Methods
 
 The start of encapsulation... breaking down the code into smaller Methods to make the code easier to follow and read. A direct quote from the step:
-> Now that we have extracted the code into the methods, the body of our program reads
-> almost like English. - Makers week 4 pre-course
+> "Now that we have extracted the code into the methods, the body of our program reads
+> almost like English."
+>
+> - Makers week 4 pre-course
 
 Well said.
 
@@ -63,3 +65,13 @@ Well said.
 > **Added** Called the methods to the end in the order we need them
 
 ### Step 6: Adding more information
+
+Changed from an 'Array in an array' structure to a 'Hash in a array' structure
+in order to hold more info when and if we require it to be stored. Right now
+we only store the name and cohort... but the internet loves info and info
+we shall give it.
+
+> **Added** Changed students array to hold hash values
+> **Added** Adapted print method to deal with the hash values
+
+### Step 7. Asking for user input
