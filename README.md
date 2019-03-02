@@ -102,11 +102,11 @@ The first part of 2 sections challenging us to add or change sections of the cod
 
 - 7. So many questions. Added methods to:
 
--- Check for empty values
+  - Check for empty values
 
--- Apply default values
+  - Apply default values
 
--- Typo request
+  - Typo request
 
 - 8. List students by cohort
 
@@ -117,3 +117,13 @@ The first part of 2 sections challenging us to add or change sections of the cod
 - 11. A typo challenge. Was given a file with multiple typos and we had to fix it with syntax disabled.
 
 - 12. Added an exit command if no students are listed
+
+### Step 9. Adding an interactive menu
+
+Adding a bit of bling to a project is never bad thing.
+In this section we are adding a menu to push different actions to the project
+as we see fit.
+
+> **Added** interactive_menu with 3 simple options
+
+### Step 10. More refactoring
