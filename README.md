@@ -152,3 +152,44 @@ along nicely now.
 > **Added** New option to the interactive_menu method
 
 > **Added** New load_students method to open and load the values
+
+### Step 13. Taking arguments from the command line
+
+Pre-defining the file needed before a program starts is quite common practice.
+It prevents errors and keeps everything running shipped shaped. Although, for those
+of us who forget (or are too plain lazy) to do so, a default value is used. Hooray!
+
+> **Added** Ability to pre-accept commands from the command line
+
+> **Added** Check if a file exists in the directory
+
+### Step 14. More Exercises
+
+The second exercise challenge. And almost the end of week 4 :disappointed:
+
+- 1. Solving a DRY principle by creating a new method
+
+- 2. Adding a students.csv as the default file to load
+
+- 3. More refactoring. Always refactoring. Refactoring for life.
+
+- 4. Add confirmation output for actions and a `sleep(3)` delay
+
+- 5. Made for a more flexible file loading experience on our menu
+
+- 6. Messed around with File class open blocks
+
+- 7. Replacing file handling class File with easier to use CSV class
+
+- 8. Factoring in a [quine](https://rosettacode.org/wiki/Quine)
+
+
+## Final thoughts
+
+It was fun making making our first end to end program and although
+the end product was a nice simple one, it is the beginning of what
+I imagine will be more to come.
+
+**Disclaimer** The final product might not reflect the above tutorial
+as I might play around with it a bit more adding newer features until
+I become bored of it and find something else to do. **Disclaimer**

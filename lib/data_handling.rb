@@ -1,5 +1,3 @@
-# require_relative '../directory.rb'
-# require_relative 'vars.rb'
 
 def print_header
   system 'clear'
@@ -28,15 +26,18 @@ end
 
 def input_students
   system 'clear'
-  puts "Please enter the names of the students"
-  puts "To finish, just hit return twice"
-  name = gets.strip
+  puts "Enter a student name.\nPress enter to finish"
+  name = STDIN.gets.strip
   while !name.empty? do
     # add the student hash to the array
-    @students << student_additional_info(name)
+    add_student(student_additional_info(name))
     puts "Now we have #{@students.count} students"
     name = gets.strip
   end
+end
+
+def add_student(input)
+ @students << input
 end
 
 # step 8 additions
@@ -63,6 +64,7 @@ def print_by_name_size(students, size)
   end
 end
 
+# not used anymore
 def print_using_until(students)
   # students.each do |student|
   #   puts "#{student[:name]} (#{student[:cohort]} cohort)"

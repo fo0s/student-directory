@@ -1,6 +1,7 @@
 require './lib/data_handling.rb'
 require './lib/menus.rb'
 require './lib/file_handling'
+require 'csv'
 
 # def print_all
 #   print_header
